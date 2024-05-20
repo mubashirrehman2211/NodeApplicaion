@@ -12,7 +12,7 @@ export const useCounterStore = defineStore("counter", {
 
   actions: {
     async sendRequest() {
-      await axios.get("http://localhost:5555/status").then((res) => {
+      await axios.get("https://node-server-sage.vercel.app/").then((res) => {
         this.data = res.data;
         console.log(this.data, "data");
         localStorage.setItem("data", JSON.stringify(this.data));
