@@ -1,22 +1,13 @@
 <script setup>
-
 import Navbar from "~/components/Navbar.vue";
 </script>
 
 <template>
-
   <main class="min-h-screen flex flex-col">
+    <Navbar class="z-10" />
 
-    <Navbar/>
-
-    <div class="content flex-grow-1">
-      <slot/>
+    <div class="content flex-grow">
+      <slot />
     </div>
-
-
   </main>
 </template>
-
-<style scoped>
-
-</style>
