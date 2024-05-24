@@ -35,7 +35,7 @@ onMounted(() => {
     <div class="img w-[20%]">
       <img
         :src="store.filterRestaurant?.image"
-        alt="sorry! This place have No Image Yet"
+        alt="sorry! This place have No image Yet"
         class="w-full shadow-sm rounded"
       />
     </div>

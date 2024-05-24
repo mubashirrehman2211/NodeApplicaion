@@ -65,6 +65,7 @@ export const useCounterStore = defineStore("counter", {
         this.sendRequestToServer();
 
         this.getDataFromServer();
+        this.err = false;
       } else {
         this.err = true;
       }
@@ -88,14 +89,14 @@ export const useCounterStore = defineStore("counter", {
         this.data = null;
         this.loading = true;
       }
-      console.log(this.data, "Old data");
+      // console.log(this.data, "Old data");
 
       if (this.city) {
         this.loading = true;
         setTimeout(() => {
           axios.get("http://localhost:5555/data").then((res) => {
             this.data = res.data;
-            console.log(this.data, "new data");
+            // console.log(this.data, "new data");
           });
         }, 6000);
       }

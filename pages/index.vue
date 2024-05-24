@@ -52,7 +52,7 @@ const store = useCounterStore();
 
             <RouterLink :to="`/${restaurant?.title}`" class="w-full">
               <button
-                class="border-2 border-gray-600 font-semibold text-gray-200 px-10 h-10 w-full bg-gray-600 rounded hover:bg-gray-400 hover:border-gray-400 hover:text-gray-700 duration-500"
+                class="border-2 border-gray-600 font-semibold text-white px-10 h-10 w-full bg-gray-600 rounded hover:bg-gray-400 hover:border-gray-400 hover:text-white duration-500"
               >
                 Visit
               </button>
