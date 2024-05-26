@@ -68,7 +68,16 @@ export const useCounterStore = defineStore("counter", {
 
             this.locationLoader = true;
 
-            this.createNewCity();
+            setTimeout(() => {
+              this.cities.push({
+                name: this.selectedValue,
+                type: null,
+                lat: latitude,
+                lng: longitude,
+              });
+
+              this.locationLoader = false;
+            }, 3000);
           },
           (error) => {
             console.log(error.message);
@@ -96,19 +105,6 @@ export const useCounterStore = defineStore("counter", {
         .catch((error) => {
           this.error = error.message;
         });
-    },
-
-    createNewCity() {
-      setTimeout(() => {
-        this.cities.push({
-          name: this.selectedValue,
-          type: null,
-          lat: latitude,
-          lng: longitude,
-        });
-
-        this.locationLoader = false;
-      }, 3000);
     },
 
     findProduct() {
