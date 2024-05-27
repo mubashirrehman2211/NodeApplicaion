@@ -28,7 +28,7 @@ const store = useCounterStore();
     </div>
   </TransitionGroup>
 
-  <MainLoader v-if="store.mainLoader">
+  <MainLoader v-if="store.mainLoader" class="h-screen">
     <img
       src="/public/icons8-dot-bricks.gif"
       class="w-[4%] rounded-full"
@@ -38,7 +38,7 @@ const store = useCounterStore();
 
   <div
     class="text-lg my-10 all-center text-gray-300"
-    v-if="!store.loading || !store.data"
+    v-if="store.mainLoader || !store.data"
   >
     Your Search will appear here
   </div>
