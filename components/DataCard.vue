@@ -28,7 +28,7 @@ const store = useCounterStore();
     </div>
   </TransitionGroup>
 
-  <MainLoader v-if="store.mainLoader" class="h-screen">
+  <MainLoader v-if="store.mainLoader">
     <img
       src="/public/icons8-dot-bricks.gif"
       class="w-[4%] rounded-full"
