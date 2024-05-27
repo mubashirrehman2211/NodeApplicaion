@@ -14,7 +14,7 @@ const store = useCounterStore();
     v-model="store.placeValue"
   />
 
-  <div class="border-2 flex rounded-xl bg-gray-600 mt-10 border-r-gray-600">
+  <div class="border-2 flex rounded-xl bg-white mt-10 border-r-gray-600">
     <USelect
       class="w-full"
       :options="store.citiesName"
