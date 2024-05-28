@@ -31,6 +31,16 @@ const store = useCounterStore();
       alt="location-loader"
     />
   </MainLoader>
+
+  <MainLoader v-if="store.mainLoader">
+    <img
+      src="/public/icons8-dot-bricks.gif"
+      class="w-[4%] rounded-full"
+      alt="Data fetching"
+    />
+  </MainLoader>
+
+ 
 </template>
 
 <style scoped>
